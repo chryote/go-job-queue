@@ -55,6 +55,7 @@ curl -X POST http://localhost:8080/enqueue \
 - Error Rate: job_queue_processed_total{status="failed"}
 
 ### 5. Project Structure
+```text
 .
 ├── cmd/
 │   ├── api/            # API Server (Enqueuer)
@@ -66,3 +67,4 @@ curl -X POST http://localhost:8080/enqueue \
 ├── prometheus.yml      # Scrape configuration
 ├── docker-compose.yml  # Infrastructure orchestration
 └── README.md
+```
