@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 5s # How often to check for data
+
+scrape_configs:
+  - job_name: 'job-worker'
+    static_configs:
+      - targets: ['worker:2112'] # 'worker' must match your service name in docker-compose

@@ -1,0 +1,11 @@
+# Binaries
+bin/
+__debug_bin
+*.exe
+
+# Docker Data (Important!)
+pgdata/
+grafana-storage/
+
+# Local env
+.env
