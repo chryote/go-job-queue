@@ -2,14 +2,14 @@
 
 A robust, production-grade distributed job processing system written in Go. This project demonstrates how to handle asynchronous tasks with high reliability, observability, and self-healing capabilities.
 
-## 🏗 Architecture Overview
+## Architecture Overview
 
 - **API Server**: A RESTful entry point that validates jobs and persists them to PostgreSQL before enqueuing them in Redis.
 - **Worker**: A scalable consumer that pulls jobs from Redis, processes them with built-in retry logic, and updates the final status in PostgreSQL.
 - **Janitor Service**: A background process using `SKIP LOCKED` logic to recover "orphaned" jobs (jobs stuck in processing due to worker crashes).
 - **Observability Stack**: Real-time metrics via Prometheus and visual dashboards via Grafana.
 
-## 🚀 Key Features
+## Key Features
 
 - **At-Least-Once Delivery**: Jobs are persisted in Postgres before processing.
 - **Self-Healing**: Automatic recovery of stalled tasks.
@@ -17,7 +17,7 @@ A robust, production-grade distributed job processing system written in Go. This
 - **Observability**: Tracks job throughput, success/failure rates, and processing latency.
 - **Scalability**: Designed to run with multiple worker instances sharing the same Redis/DB backends.
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Language**: Go (Golang)
 - **Database**: PostgreSQL (State Persistence)
@@ -25,7 +25,7 @@ A robust, production-grade distributed job processing system written in Go. This
 - **Monitoring**: Prometheus & Grafana
 - **Containerization**: Docker & Docker Compose
 
-## 🚦 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Docker and Docker Compose
